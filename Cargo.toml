@@ -50,7 +50,7 @@ features = ["into_bits"]
 libc = { version = "0.2", optional = true }
 
 [target.'cfg(windows)'.dependencies]
-winapi = { version = "0.3", features = ["minwindef", "ntsecapi", "profileapi", "winnt"], optional = true }
+winapi = { path = "../winapi-rs", features = ["minwindef", "ntsecapi", "profileapi", "winnt"], optional = true }
 
 [target.'cfg(target_os = "cloudabi")'.dependencies]
 cloudabi = { version = "0.0.3", optional = true }
